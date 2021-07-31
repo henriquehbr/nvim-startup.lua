@@ -1,14 +1,6 @@
-local startup_time_file_path = '/tmp/nvim-startuptime'
+require 'file_exists'
 
-local function file_exists(name)
-    local file = io.open(name)
-    if file == nil then
-        print('nvim-startup: couldn\'t retrieve startup time log file (' .. startup_time_file_path .. ')')
-        return nil
-    end
-    file:close()
-    return true
-end
+local startup_time_file_path = '/tmp/nvim-startuptime'
 
 local function display_startup_time()
     local startup_time_file = io.open(startup_time_file_path)
