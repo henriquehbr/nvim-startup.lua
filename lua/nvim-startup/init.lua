@@ -1,9 +1,22 @@
 local startup_time_file_path = '/tmp/nvim-startuptime'
 
+local function file_exists(name)
+    local file = io.open(name)
+    if file == nil then
+        print('nvim-startup: couldn\'t retrieve startup time log file (' .. startup_time_file_path .. ')')
+        return nil
+    end
+    file:close()
+    return true
+end
+
 local function display_startup_time()
     local startup_time_file = io.open(startup_time_file_path)
 
-    -- get the latest line from vim startup log
+    -- closes file handle and returns "nil" in case the file doesn't exists
+    if not file_exists(startup_time_file_path) then return nil end
+
+    -- gets the latest line from vim startup log
     -- Lua has it's own pattern matching syntax, mainly because
     -- a regex library would already be larger than lua itself
     local startup_time = startup_time_file
