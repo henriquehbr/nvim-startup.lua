@@ -12,6 +12,8 @@ local function display_startup_time()
 
     startup_time_file:close()
 
+    os.remove(startup_time_file_path)
+
     print('Launched in ' .. startup_time .. ' ms')
 end
 
