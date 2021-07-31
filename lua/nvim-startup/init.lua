@@ -1,6 +1,6 @@
 local startup_time_file_path = '/tmp/nvim-startuptime'
 
-function display_startup_time()
+local function display_startup_time()
     local startup_time_file = io.open(startup_time_file_path)
 
     -- get the latest line from vim startup log
