@@ -1,8 +1,7 @@
 require 'file_exists'
 
-local startup_time_file_path = '/tmp/nvim-startuptime'
-
 local function display_startup_time()
+    local startup_time_file_path = '/tmp/nvim-startuptime'
     local startup_time_file = io.open(startup_time_file_path)
 
     -- closes file handle and returns "nil" in case the file doesn't exists
