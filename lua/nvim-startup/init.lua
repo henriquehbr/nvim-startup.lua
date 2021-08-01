@@ -17,7 +17,7 @@ local function display_startup_time()
 
     -- clear startup time log
     -- removing it causes some cache related issues (hyphothesis)
-    io.open(g.nvim_startup_file):close()
+    io.open(g.nvim_startup_file, 'w'):close()
 
     print('Launched in ' .. startup_time .. ' ms')
 end
