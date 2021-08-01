@@ -1,4 +1,4 @@
-require 'file_exists'
+local file_exists = require 'file_exists'
 
 -- global variables
 local g = vim.g
