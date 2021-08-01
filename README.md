@@ -18,10 +18,10 @@ paq {'henriquehbr/nvim-startup.lua'}
 Plug 'henriquehbr/nvim-startup.lua'
 ```
 
-After that, you just need to initialize the plugin, it's pretty simple, no more than a single line for that:
+After that, you just need to initialize the plugin, it's pretty simple, no more than a single `require` for that:
 
 ```
-require 'nvim-startup'.display_startup_time()
+require 'nvim-startup'
 ```
 
 The last step required for the plugin to work effectively, is to create a alias on your `.bashrc` or `.zshrc` like the one below:
