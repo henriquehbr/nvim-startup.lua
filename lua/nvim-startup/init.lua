@@ -1,11 +1,14 @@
 require 'file_exists'
 
+-- global variables
+local g = vim.g
+g.nvim_startup_file = g.nvim_startup_file or '/tmp/nvim-startuptime'
+
 local function display_startup_time()
-    local startup_time_file_path = '/tmp/nvim-startuptime'
-    local startup_time_file = io.open(startup_time_file_path)
+    local startup_time_file = io.open(g.nvim_startup_file)
 
     -- closes file handle and returns "nil" in case the file doesn't exists
-    if not file_exists(startup_time_file_path) then return nil end
+    if not file_exists(vim.g['nvim_startup_file']) then return nil end
 
     -- gets the latest line from vim startup log
     -- Lua has it's own pattern matching syntax, mainly because
@@ -16,7 +19,7 @@ local function display_startup_time()
 
     startup_time_file:close()
 
-    os.remove(startup_time_file_path)
+    os.remove(g.nvim_startup_file)
 
     print('Launched in ' .. startup_time .. ' ms')
 end
