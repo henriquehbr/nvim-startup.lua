@@ -24,3 +24,8 @@ Plug 'henriquehbr/nvim-startup.lua'
 Launched in <x> ms
 ```
 
+## Configuration
+
+### Global variables
+
+- `g:nvim_startup_file` - allow setting startup log path through global variables (default: '/tmp/nvim-startuptime')
