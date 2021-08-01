@@ -8,6 +8,4 @@ local function file_exists(name)
     return true
 end
 
-return {
-    file_exists = file_exists
-}
+return file_exists
