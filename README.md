@@ -35,7 +35,13 @@ alias nvim='nvim --startuptime /tmp/nvim-startup-time'
 After that, you're done, just reload your nvim and hopefully you will see a message just like that:
 
 ```
-Launched in <x> ms
+nvim-startup: running on the next (n)vim instance
+```
+
+Don't worry, that means the plugin still couldn't find the startup time log file on the first run, it's completely normal and expected to happen, it will work fine on subsequent runs of vim, with the message below:
+
+```
+nvim-startup: launched in <x> ms
 ```
 
 ## Configuration
