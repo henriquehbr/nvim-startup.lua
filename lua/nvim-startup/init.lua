@@ -13,7 +13,7 @@ if string.len(startup_time_file) > 0 then
     -- removing it causes some cache related issues (hyphothesis)
     io.open(g.nvim_startup_file, 'w'):close()
 
-    print('Launched in ' .. startup_time .. ' ms')
+    print('nvim-startup: launched in ' .. startup_time .. ' ms')
 else
     print('nvim-startup: running on the next (n)vim instance')
 end
