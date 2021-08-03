@@ -69,3 +69,22 @@ That means your startup log file doesn't exists, you might consider checking if:
 
 - The file exists, is on the correct path, and you have the proper permissions to read it
 - You remembered to setup a alias for your shell for generating the startup log file when launching neovim
+
+## Contribution guidelines
+
+If you're willing to contribute to `nvim-startup`, it's highly recommended to follow the steps below (for organization purposes)
+
+1. Fork the repo
+2. Open a new branch following one of the following naming patterns
+    - `feat/<branch_name>` for features
+    - `fix/<branch_name>` for bugfixes
+    - `chore/<branch_name>` for small changes that doesn't fit the ones above
+3. Run `make init` to setup the `pre-commit` Git hook and install `luacheck` (for automated linting)
+    - For this step, you must have [`luarocks`](https://github.com/luarocks/luarocks) and `make` installed
+4. All commits should also follow a similar naming pattern as the branches, examples below:
+    - `feat: <commit_message>` for features
+    - `fix: <commit_message>` for bugfixes
+    - `chore: <commit_message>` for small changes that doesn't fit the ones above
+5. Submit your PR! (preferably a small one and concise one, for a faster code review)
+
+> Pull requests that stricly follow the recommendations above will have higher priority in contrast of those who don't
