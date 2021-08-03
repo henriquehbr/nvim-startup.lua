@@ -28,7 +28,7 @@ $ git clone --depth 1 https://github.com/henriquehbr/nvim-startup.lua
 To get it up and running, first, `require` it on your config:
 
 ```
-require 'nvim-startup'
+require 'nvim-startup'.setup()
 ```
 
 Then, the last step required for the plugin to work effectively, is to create a alias on your `.bashrc` or `.zshrc` like the one below:
@@ -53,9 +53,13 @@ nvim-startup: launched in <x> ms
 
 ## Configuration
 
-### Global variables
+The example below represents all the possible settings with their respective types and default values
 
-- `g:nvim_startup_file` - allow setting startup log path through global variables (default: `'/tmp/nvim-startuptime'`)
+```lua
+require 'nvim-startup'.setup {
+    startup_file = '/tmp/nvim-startuptime' -- sets startup log path (string)
+}
+```
 
 ## Contribution guidelines
 
