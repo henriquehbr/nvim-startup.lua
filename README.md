@@ -23,13 +23,15 @@ $ git clone --depth 1 https://github.com/henriquehbr/nvim-startup.lua
 
 > `nvim-startup` is intended to be immediately executed on (n)vim startup, so if your plugin manager has some sort of `opt` funcionality that marks it as a optional plugin, avoid it!
 
-After that, you just need to initialize the plugin, it's pretty simple, no more than a single `require` for that:
+## Usage
+
+To get it up and running, first, `require` it on your config:
 
 ```
 require 'nvim-startup'
 ```
 
-The last step required for the plugin to work effectively, is to create a alias on your `.bashrc` or `.zshrc` like the one below:
+Then, the last step required for the plugin to work effectively, is to create a alias on your `.bashrc` or `.zshrc` like the one below:
 
 ```
 alias nvim='nvim --startuptime /tmp/nvim-startuptime'
