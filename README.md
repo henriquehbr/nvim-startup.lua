@@ -27,7 +27,7 @@ require 'nvim-startup'
 The last step required for the plugin to work effectively, is to create a alias on your `.bashrc` or `.zshrc` like the one below:
 
 ```
-alias nvim='nvim --startuptime /tmp/nvim-startup-time'
+alias nvim='nvim --startuptime /tmp/nvim-startuptime'
 ```
 
 > By default, `nvim-startup` uses `/tmp/nvim-startuptime` as it's startup log file, but if you need to change that, you can specify a different path on the `g:nvim_startup_file` global variable
