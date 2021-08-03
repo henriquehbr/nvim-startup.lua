@@ -57,19 +57,6 @@ nvim-startup: launched in <x> ms
 
 - `g:nvim_startup_file` - allow setting startup log path through global variables (default: `'/tmp/nvim-startuptime'`)
 
-## Troubleshooting
-
-In case you see the following message:
-
-```
-nvim-startup: couldn't retrieve startup time log file (...)
-```
-
-That means your startup log file doesn't exists, you might consider checking if:
-
-- The file exists, is on the correct path, and you have the proper permissions to read it
-- You remembered to setup a alias for your shell for generating the startup log file when launching neovim
-
 ## Contribution guidelines
 
 If you're willing to contribute to `nvim-startup`, it's highly recommended to follow the steps below (for organization purposes)
