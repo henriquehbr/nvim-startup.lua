@@ -4,27 +4,34 @@
 
 ## Installation
 
-Install it with your plugin manager of choice: 
+If you're using one of these plugin managers:
 
-#### [`paq-nvim`](https://github.com/savq/paq-nvim)
+- [`paq-nvim`](https://github.com/savq/paq-nvim)
+- [`packer.nvim`](https://github.com/wbthomason/packer.nvim)
+- [`vim-plug`](https://github.com/junegunn/vim-plug)
+- [`Vundle.vim`](https://github.com/VundleVim/Vundle.vim)
+- [`dein.vim`](https://github.com/Shougo/dein.vim)
+- [`minipac`](https://github.com/k-takata/minpac)
+
+The installation method is pretty much the same for all of them, simply initialize the plugin manager and include `henriquehbr/nvim-startup.lua` on the list
+
+Otherwise, if you're using [`pathogen`](https://github.com/tpope/vim-pathogen), simply clone it on your `~/.vim/bundle` directory:
 
 ```
-paq {'henriquehbr/nvim-startup.lua'}
+$ git clone --depth 1 https://github.com/henriquehbr/nvim-startup.lua
 ```
 
-#### [`vim-plug`](https://github.com/junegunn/vim-plug)
+> `nvim-startup` is intended to be immediately executed on (n)vim startup, so if your plugin manager has some sort of `opt` funcionality that marks it as a optional plugin, avoid it!
 
-```
-Plug 'henriquehbr/nvim-startup.lua'
-```
+## Usage
 
-After that, you just need to initialize the plugin, it's pretty simple, no more than a single `require` for that:
+To get it up and running, first, `require` it on your config:
 
 ```
 require 'nvim-startup'
 ```
 
-The last step required for the plugin to work effectively, is to create a alias on your `.bashrc` or `.zshrc` like the one below:
+Then, the last step required for the plugin to work effectively, is to create a alias on your `.bashrc` or `.zshrc` like the one below:
 
 ```
 alias nvim='nvim --startuptime /tmp/nvim-startuptime'
