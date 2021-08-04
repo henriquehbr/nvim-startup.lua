@@ -58,6 +58,10 @@ The example below represents all the possible settings with their respective typ
 ```lua
 require 'nvim-startup'.setup {
     startup_file = '/tmp/nvim-startuptime' -- sets startup log path (string)
+    message = 'Whoa! those {} are pretty fast' -- sets a custom message (string | function)
+    message = function(time) -- function-based custom message
+        time < 100 and 'Just {}? really good!' or 'Those {} can get faster'
+    end
 }
 ```
 
