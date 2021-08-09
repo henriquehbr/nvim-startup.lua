@@ -13,10 +13,13 @@ M.setup = function(options)
 
     -- "#" is the length operator, can be used on strings or tables
     local startup_time = startup_time_file
-        and startup_time_file:match(startup_time_pattern)
+        and tonumber(startup_time_file:match(startup_time_pattern))
         or nil
 
-    local message = opts.message:gsub('{}', startup_time .. ' ms')
+    local template_message = type(opts.message) == 'function'
+        and opts.message(startup_time)
+        or opts.message
+    local message = template_message:gsub('{}', startup_time .. ' ms')
 
     if startup_time_file and startup_time then
         print(message)
