@@ -1,6 +1,6 @@
 # nvim-startup.lua
 
-> minimalistic startup time feedback
+> Displays neovim startup time
 
 ## Installation
 
