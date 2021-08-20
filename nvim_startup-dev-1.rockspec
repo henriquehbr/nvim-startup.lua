@@ -7,7 +7,7 @@ description = {
     summary = "> minimalistic startup time feedback",
     detailed = "> minimalistic startup time feedback",
     homepage = "https://github.com/henriquehbr/nvim-startup.lua",
-    license = "*** please specify a license ***"
+    license = "MIT"
 }
 dependencies = {
     "luacheck >= 0.24.0-2"
