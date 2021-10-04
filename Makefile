@@ -21,7 +21,7 @@ install-node-deps:
 install-deps: install-lua-deps install-rust-deps install-node-deps
 
 stylua:
-	stylua lua/ataraxis
+	stylua lua/nvim-startup
 
 luacheck:
 	luacheck --config .luacheckrc ./lua/**/*.lua
