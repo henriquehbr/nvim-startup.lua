@@ -4,9 +4,9 @@ export PATH := lua_modules/bin:$(PATH)
 # allows running rust crates directly
 export PATH := rust_modules/bin:$(PATH)
 
-init: hooks install-deps
+init: setup-git-hooks install-deps
 
-hooks:
+setup-git-hooks:
 	git config core.hooksPath .githooks
 
 install-lua-deps:
