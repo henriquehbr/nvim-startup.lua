@@ -1,0 +1,4 @@
+column_width = 80
+quote_style = "ForceDouble"
+indent_type = "Spaces"
+no_call_parentheses = true
