@@ -1,4 +1,4 @@
-# allows running lua modules directly
+# allows running lua rocks directly
 export PATH := lua_modules/bin:$(PATH)
 
 # allows running rust crates directly
