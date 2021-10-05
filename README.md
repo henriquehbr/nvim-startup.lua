@@ -2,6 +2,15 @@
 
 > Displays neovim startup time
 
+## Summary
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contribution guidelines](#contribution-guidelines)
+    - [Requirements](#requirements)
+    - [Steps](#steps)
+
 ## Installation
 
 If you're using one of these plugin managers:
