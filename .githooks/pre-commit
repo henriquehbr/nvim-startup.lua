@@ -1,3 +1,3 @@
 #!/bin/sh
 
-make lint && git add lua/nvim-startup
+make style && make lint && git add lua/nvim-startup

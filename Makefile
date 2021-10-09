@@ -11,6 +11,7 @@ setup-git-hooks:
 
 install-lua-deps:
 	luarocks --tree lua_modules install luacheck
+	luarocks --tree lua_modules --server https://luarocks.org/dev install luaformatter
 
 install-rust-deps:
 	cargo install stylua --root rust_modules
@@ -26,4 +27,9 @@ stylua:
 luacheck:
 	luacheck --config .luacheckrc ./lua/**/*.lua
 
-lint: stylua luacheck
+luaformatter:
+	lua-format -i -c .lua-format lua/nvim-startup/*.lua
+
+lint: luacheck
+
+style: stylua luaformatter
