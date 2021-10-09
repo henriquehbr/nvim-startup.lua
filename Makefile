@@ -10,7 +10,7 @@ setup-git-hooks:
 	git config core.hooksPath .githooks
 
 install-lua-deps:
-	luarocks --tree=lua_modules install --only-deps nvim_startup-dev-1.rockspec
+	luarocks --tree=lua_modules install luacheck
 
 install-rust-deps:
 	cargo install stylua --root rust_modules
