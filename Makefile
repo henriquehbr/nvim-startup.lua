@@ -29,7 +29,7 @@ luacheck:
 	luacheck --config .luacheckrc ./lua/**/*.lua
 
 luaformatter:
-	lua-format -i -c .lua-format lua/nvim-startup/*.lua
+	lua-format -i lua/nvim-startup/*.lua
 
 selene:
 	selene lua/nvim-startup
