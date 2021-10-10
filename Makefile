@@ -15,6 +15,7 @@ install-lua-deps:
 
 install-rust-deps:
 	cargo install stylua --root rust_modules
+	cargo install selene --root rust_modules
 
 install-node-deps:
 	npm i
@@ -30,6 +31,9 @@ luacheck:
 luaformatter:
 	lua-format -i -c .lua-format lua/nvim-startup/*.lua
 
-lint: luacheck
+selene:
+	selene lua/nvim-startup
+
+lint: luacheck selene
 
 style: stylua luaformatter
