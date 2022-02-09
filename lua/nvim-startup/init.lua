@@ -23,6 +23,7 @@ M.setup = function(options)
                                      opts.message(startup_time) or opts.message
         local message = template_message:gsub("{}", startup_time .. " ms")
         print(message)
+        return startup_time
     elseif startup_time_file and not startup_time then
         print "nvim-startup: running on the next (n)vim instance"
     else
