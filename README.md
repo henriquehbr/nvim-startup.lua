@@ -1,3 +1,24 @@
+# Important notice
+
+This project is currently hosted on GitHub. This is not ideal; GitHub is a proprietary,
+trade-secret system that is not Free and Open Souce Software (FOSS). I'm deeply
+concerned about using a proprietary system like GitHub to develop our FOSS project.
+I urge you to read about the [Give up GitHub](https://GiveUpGitHub.org) campaign
+from [the Software Freedom Conservancy](https://sfconservancy.org) to understand
+some of the reasons why GitHub is not a good place to host FOSS projects.
+
+With that in mind, i'll be migrating this repository to sourcehut on **August 1st**,
+after that, with the intent of keeping users and contributors informed, this repository
+will be archived, and all of it's files and commit history will be removed (with
+the exception of this notice), keep in mind that development will happen exclusively
+at sourcehut
+
+Any use of this project's code by GitHub Copilot, past or present, is done
+without my permission. I do not consent to GitHub's use of this project's
+code in Copilot.
+
+![Logo of the GiveUpGitHub campaign](https://sfconservancy.org/img/GiveUpGitHub.png)
+
 # nvim-startup.lua
 
 > Displays neovim startup time
